@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Oishi.ControlsForUser.MenuUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Oishi.ControlsForUser"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="950"
+             HorizontalAlignment="Center"
+             x:Name="UserMenu">
+    <Grid>
+        <Border Grid.Column="0" Style="{StaticResource BackgroundStyleControl}">
+            <Grid x:Name="MainGridMenu" Width="950">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBlock Text="{DynamicResource NoodlesText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/1.png" Margin="0 17 0 0" MouseDown="Image_MouseDown"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <TextBlock Text="{DynamicResource RamenText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/9.png" Margin="0 17 0 0" MouseDown="Image_MouseDown_1"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <TextBlock Text="{DynamicResource SoupText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/14.png" Margin="0 17 0 0" MouseDown="Image_MouseDown_2"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <TextBlock Text="{DynamicResource DonburiText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/17.png" Margin="0 17 0 0" MouseDown="Image_MouseDown_3"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="3">
+                    <TextBlock Text="{DynamicResource PokeText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/16.png" Margin="0 17 0 0" MouseDown="Image_MouseDown_4"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="5">
+                    <TextBlock Text="{DynamicResource RiceText}" Style="{StaticResource BlackText}" VerticalAlignment="Top" Margin="0 2 0 0" FontSize="20"/>
+                    <Image Source="/Assets/Food/12.png" Margin="0 17 0 0" MouseDown="Image_MouseDown_5"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

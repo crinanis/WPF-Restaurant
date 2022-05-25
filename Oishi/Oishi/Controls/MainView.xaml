@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Oishi.Controls.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Oishi.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="950"
+             Background="Transparent"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center">
+    <Grid>
+        <Border Grid.Column="0" Style="{StaticResource BackgroundStyle}">
+            <Grid Width="950">
+                <Image Source="/Assets/Pictures/krug.png"
+               Stretch="Fill"/>
+                <!--// Close App Button //-->
+
+                
+                <Grid Style="{StaticResource NameBase}">
+
+                    <TextBlock Style="{StaticResource TextOne}" />
+                    <Border Style="{StaticResource TextBorder}">
+                        <TextBlock Style="{StaticResource TextTwo}" Text="{DynamicResource Textic}" />
+                    </Border>
+
+                </Grid>
+            </Grid>
+        </Border>
+
+
+    </Grid>
+</UserControl>

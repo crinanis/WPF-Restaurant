@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Oishi.Controls.OrdersControl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Oishi.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="950"
+      HorizontalAlignment="Center"
+      x:Name="Menu"
+      IsVisibleChanged="Order_IsVisibleChanged">
+
+    <Grid>
+        <Grid>
+            <Border Grid.Column="0" Style="{StaticResource BackgroundStyleControl}">
+                <Grid x:Name="MainGrid" Width="950">
+
+                    <!--// Close App Button //-->
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.9*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Background="Transparent" Grid.Row="1" Grid.Column="1" Margin="0,5,0,0" >
+                        <Grid Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="0.2*"/>
+                            </Grid.RowDefinitions>
+                            <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Background="Transparent" x:Name="DGridOrders">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn ElementStyle="{StaticResource WrapText}" Header="{DynamicResource Date}" Binding="{Binding BookingDatetime}" Width="*"></DataGridTextColumn>
+                                    <DataGridTextColumn ElementStyle="{StaticResource WrapText}" Header="{DynamicResource Email}" Binding="{Binding UserEmail}" Width="*"></DataGridTextColumn>
+                                    <DataGridTextColumn ElementStyle="{StaticResource WrapText}" Header="{DynamicResource Wish}" Binding="{Binding Wishes}" Width="*"></DataGridTextColumn>
+                                    <DataGridTemplateColumn Width="*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Style="{StaticResource UsualButton}" Content="{DynamicResource Confirmation}" Click="Button_Click" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
